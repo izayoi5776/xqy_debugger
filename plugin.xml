@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Xquery Editor"
+            extensions="xqy"
+            icon="icons/sample.gif"
+            contributorClass="xqy_debugger.editors.MultiPageEditorContributor"
+            class="xqy_debugger.editors.MultiPageEditor"
+            id="xqy_debugger.editors.MultiPageEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="xqy debugger Wizards"
+            id="xqy_debugger">
+      </category>
+      <wizard
+            name="MarkLogic Xquery Script"
+            icon="icons/sample.gif"
+            category="xqy_debugger"
+            class="xqy_debugger.wizards.XqyNewWizard"
+            id="xqy_debugger.wizards.XqyNewWizard">
+      </wizard>
+   </extension>
+
+</plugin>
