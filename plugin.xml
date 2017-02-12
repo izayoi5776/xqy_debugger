@@ -9,7 +9,7 @@
             extensions="xqy"
             icon="icons/sample.gif"
             contributorClass="xqy_debugger.editors.MultiPageEditorContributor"
-            class="xqy_debugger.editors.MultiPageEditor"
+            class="xqy_debugger.editors.XMLEditor"
             id="xqy_debugger.editors.MultiPageEditor">
       </editor>
    </extension>

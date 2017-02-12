@@ -30,6 +30,9 @@ import org.eclipse.ui.*;
 import org.eclipse.ui.editors.text.TextEditor;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
+
+
+
 import org.eclipse.ui.ide.IDE;
 
 /**
@@ -43,6 +46,9 @@ import org.eclipse.ui.ide.IDE;
  */
 public class MultiPageEditor extends MultiPageEditorPart implements IResourceChangeListener{
 
+	private ColorManager colorManager;
+	
+	
 	/** The text editor used in page 0. */
 	private TextEditor editor;
 
@@ -67,6 +73,7 @@ public class MultiPageEditor extends MultiPageEditorPart implements IResourceCha
 			editor = new TextEditor();
 			int index = addPage(editor, getEditorInput());
 			setPageText(index, editor.getTitle());
+			
 		} catch (PartInitException e) {
 			ErrorDialog.openError(
 				getSite().getShell(),

@@ -1,0 +1,28 @@
+■実行時ものはどこにあるか？
+	consoleに表示される
+		sub eclipseのworkspace
+			C:\Users\you\workspace/../runtime-EclipseApplication
+		debug中の自分のpluginは
+			C:/Users/you/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.propertiesの内容により
+			開発環境のbinの配下になる
+
+■editor色付ける方法は？
+	org.eclipse.ui.texteditor.AbstractTextEditor.adjustHighlightRange関係ありそう
+		http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fui%2Ftexteditor%2FAbstractTextEditor.html&anchor=adjustHighlightRange-int-int-
+		物理範囲示す？
+	参考
+		検索と色付けるplugin	https://github.com/ystrot/glance.git
+			com.xored.glance.ui.gef/src/.../controls/
+				HighlightLabel.java		org.eclipse.draw2d.Figure.setBounds(new Rectangleを使用
+				HighlightFigure.java	extends Figureを使用
+	背景を変えるplugin
+		http://editbox.sourceforge.net/
+	類似質問あった
+		http://stackoverflow.com/questions/13802131/in-an-eclipse-plugin-how-can-i-programmatically-highlight-lines-of-codes-in-the
+			Annotations
+			Markers
+	Syntax coloringまさにこれじゃん
+		http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Feditors_highlighting.htm&cp=2_0_13_6
+
+	multipageeditorはeditorと違って、簡単に色設定できない。
+		取りあえず例を切り替え
