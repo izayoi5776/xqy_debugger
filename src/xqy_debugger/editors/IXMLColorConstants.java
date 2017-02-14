@@ -8,4 +8,5 @@ public interface IXMLColorConstants {
 	RGB STRING = new RGB(200, 112, 76);
 	RGB DEFAULT = new RGB(150, 10, 90);
 	RGB TAG = new RGB(0, 0, 128);
+	RGB VAR = new RGB(200, 60, 90);
 }

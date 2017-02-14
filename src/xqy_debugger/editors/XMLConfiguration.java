@@ -66,7 +66,7 @@ public class XMLConfiguration extends SourceViewerConfiguration {
 		reconciler.setDamager(dr, XMLPartitionScanner.XML_TAG);
 		reconciler.setRepairer(dr, XMLPartitionScanner.XML_TAG);
 
-		dr = new DefaultDamagerRepairer(getXMLScanner());
+		dr = new DefaultDamagerRepairer(getXMLTagScanner());
 		reconciler.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
 		reconciler.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
 

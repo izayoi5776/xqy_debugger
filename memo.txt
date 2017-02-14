@@ -28,31 +28,20 @@
 		取りあえず例を切り替え
 
 ■editor sampleの構造解析
-	IXMLColorConstants			色のＲＧＢをまとめて保管。定数の代わりに使う
-	ColorManager				ＲＧＢをもらってＣｏｌｏｒを返す。Ｃｏｌｏｒは削除する義務がＡｐｐ側にあるためまとめて管理
-	NonRuleBasedDamagerRepairer	自定義処理
-	TagRule						ＴＡＧを切り出すルール。<?、<!除く
-	XMLConfiguration			設定のまとめ
-	XMLDocumentProvider			IDocument提供
-	XMLDoubleClickStrategy		double click時の対処
 	XMLEditor					入口クラス。Ｅｄｉｔｏｒ定義
-	XMLPartitionScanner			分割用ルール。コメントとＴＡＧを定義
-	XMLScanner					処理命令<? ?>を検索
-	XMLTagScanner				single/double quotes文字列検索
-	XMLWhitespaceDetector		空白管理
 
+	　XMLDocumentProvider		IDocument提供
+	　　XMLPartitionScanner		広範囲分割ルール。コメントとＴＡＧを定義、未定義分はdefaultになる
+	　　　TagRule				ＴＡＧを切り出すルール。<?、<!除く
 
-	XMLEditor
-		ColorManager
-		XMLConfiguration
-			XMLDoubleClickStrategy
-			XMLScanner
-				XMLWhitespaceDetector
-			XMLTagScanner
-				XMLWhitespaceDetector
+	　XMLConfiguration			Partition毎に細かいルールを設定まとめ
+	　　XMLScanner				処理命令<? ?>を検索
+	　　XMLTagScanner			single/double quotes文字列検索
+	　　XMLWhitespaceDetector	空白管理
+	　　NonRuleBasedDamagerRepairer	自定義処理
 
-		XMLDocumentProvider
-			XMLPartitionScanner
-				TagRule
+	　ColorManager				ＲＧＢをもらってＣｏｌｏｒを返す。Ｃｏｌｏｒは削除する義務がＡｐｐ側にあるためまとめて管理
+	　IXMLColorConstants		色のＲＧＢをまとめて保管。定数の代わりに使う
+	　XMLDoubleClickStrategy	double click時の対処
 
 
