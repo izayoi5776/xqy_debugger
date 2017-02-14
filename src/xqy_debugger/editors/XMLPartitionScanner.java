@@ -13,7 +13,7 @@ public class XMLPartitionScanner extends RuleBasedPartitionScanner {
 
 		IPredicateRule[] rules = new IPredicateRule[2];
 
-		rules[0] = new MultiLineRule("<!--", "-->", xmlComment);
+		rules[0] = new MultiLineRule("(:", ":)", xmlComment);
 		rules[1] = new TagRule(tag);
 
 		setPredicateRules(rules);
