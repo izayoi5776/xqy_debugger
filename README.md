@@ -11,8 +11,8 @@ this is just a todo plan, not complete yet.
   2.0         show function help</br>
   1.0         debug run on MarkLogic server</br>
   milestone02 run on MarkLogic server</br>
-  milestone01 editor with syntex hilight for xquery</br>
-  start line  a plugin example of editor <==  we are here</br>
+  milestone01 editor with syntex hilight for xquery  <== WE AER HERE</br>
+  start line  a plugin example of editor </br>
 </pre>
 
 ## ref

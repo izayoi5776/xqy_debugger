@@ -6,7 +6,6 @@ public class XqyWordDetector implements IWordDetector {
 
 	@Override
 	public boolean isWordStart(char c) {
-		// TODO Auto-generated method stub
 		if((c >='A' && c <= 'Z') || (c >='a' && c <= 'z'))
 			return true;
 		else return false;

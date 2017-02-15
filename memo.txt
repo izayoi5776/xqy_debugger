@@ -44,4 +44,48 @@
 	　IXMLColorConstants		色のＲＧＢをまとめて保管。定数の代わりに使う
 	　XMLDoubleClickStrategy	double click時の対処
 
+■構成検討
+	Partition分割方法
+	
+	色設定
+		comment	
+		変数
+		文字列
+		数字
+		保留字
+		記号()[]:=;/||,
+		引号内文字列
+
+		http://wiki.codeblocks.org/index.php/Syntax_highlighting_custom_colour_themes#Idel
+		Comment			135,135,135
+		keyword			255,128,64
+		user keyword	156,37,156
+		string			0,155,45
+		preprocessor	0,128,255
+		
+		https://atom.io/themes/seti-ui
+		https://github.com/jesseweed/seti-ui/blob/v1.6.1/styles/ui-variables.less
+		- @blue		#519aba;
+		- @grey		#4d5a5e;
+		- @green	#8dc149;
+		- @orange	#e37933;
+		- @pink		#f55385;
+		- @purple	#a074c4;
+		- @red		#cc3e44;
+		- @white	#d4d7d6;
+		- @yellow	#cbcb41;
+
+		color tool
+			https://www.w3schools.com/colors/colors_picker.asp
+
+■dbg
+	dbg:eval
+	dbg:status
+	dbg:step
+	dbg:stack
+	dbg:value
+	
+	注意
+		timeout
+		task server thread
 

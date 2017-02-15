@@ -71,7 +71,7 @@ public class XMLConfiguration extends SourceViewerConfiguration {
 		reconciler.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
 
 		NonRuleBasedDamagerRepairer ndr = new NonRuleBasedDamagerRepairer(
-				new TextAttribute(colorManager.getColor(IXMLColorConstants.XML_COMMENT)));
+				new TextAttribute(colorManager.getColor(IXMLColorConstants.XQY_COMMENT)));
 		reconciler.setDamager(ndr, XMLPartitionScanner.XML_COMMENT);
 		reconciler.setRepairer(ndr, XMLPartitionScanner.XML_COMMENT);
 
